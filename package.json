@@ -1,0 +1,40 @@
+{
+  "name": "dialogflow-example-memo",
+  "version": "1.0.0",
+  "description": "An Example of Dialogflow by Firebase Cloud Functions",
+  "main": "src/index.js",
+  "scripts": {
+    "firebase": "firebase",
+    "test": "npm run eslint",
+    "eslint": "eslint src",
+    "deploy": "firebase deploy --only functions"
+  },
+  "dependencies": {
+    "actions-on-google": "^2.1.2",
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "firebase-tools": "^3.18.5"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2015
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": "off"
+    }
+  },
+  "keywords": [
+    "Actions on Google",
+    "Dialogflow",
+    "Cloud Functions for Firebase"
+  ],
+  "license": "MIT"
+}
