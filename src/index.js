@@ -26,7 +26,6 @@ app.intent('create/content', conv => {
 app.intent('refer', conv => {
   const list = conv.user.storage.list;
   if (list && list.length > 0) {
-    conv.data.intent = 'PLAY';
     conv.ask(`${list[0]}、とのことです。消しますか？`);
   } else {
     conv.close('すいません、何もメモはないようです。');
