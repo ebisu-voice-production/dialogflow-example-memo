@@ -23,14 +23,6 @@ app.intent('create/content', conv => {
   conv.close(`${inputText}、ですね。覚えておきます。`);
 });
 
-app.intent('create/custom-content', conv => {
-  const storage = conv.user.storage;
-  const list = storage.list || [];
-  const inputText = conv.query;
-  conv.user.storage.list = [...list, inputText];
-  conv.close(`${inputText}、ですね。覚えておきます。`);
-});
-
 app.intent('refer', conv => {
   const list = conv.user.storage.list;
   if (list && list.length > 0) {
@@ -48,4 +40,4 @@ app.intent('refer/confirm to remove/no', conv => {
   conv.close('まだ覚えておきますね。ではまた。');
 });
 
-exports.colorWithNumber = functions.https.onRequest(app);
+exports.memo = functions.https.onRequest(app);
